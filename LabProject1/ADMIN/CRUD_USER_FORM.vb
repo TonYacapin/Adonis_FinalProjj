@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class CRUD_USER_FORM
     Private Function IsPasswordComplex(password As String) As Boolean
@@ -68,6 +70,27 @@ Public Class CRUD_USER_FORM
 
     End Sub
 
+    Public Sub UpdateSURecords(username As String, status As String)
+        Try
+            Dim connectionString As String = "server=localhost;user=root;password=root;database=db_burgeran;"
+            Dim sql As String = "INSERT INTO SUrecords (Updatedby, DateUpdated, Description) VALUES (@Username, @LoginTime, @Status)"
+
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+                Using cmdCheck As New MySqlCommand(sql, connection)
+
+                    cmdCheck.Parameters.AddWithValue("@LoginTime", DateTime.Now)
+                    cmdCheck.Parameters.AddWithValue("@Status", status)
+                    cmdCheck.Parameters.AddWithValue("@Username", username)
+                    cmdCheck.ExecuteNonQuery()
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+        End Try
+    End Sub
+
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Close()
         AdminForm.Show()
@@ -132,7 +155,15 @@ Public Class CRUD_USER_FORM
 
                             cmdInsert.Transaction.Commit() ' Commit the transaction if everything is successful
                             MessageBox.Show("User created successfully.")
+
+
+                            UpdateSURecords(AdminForm.lbl_username.Text, "Added User: " + TB_USERNAME.Text)
+
                             LoadLoginCData()
+
+
+
+
                         Catch ex As MySqlException
                             If ex.Number = 1062 Then ' MySQL error code for duplicate entry
                                 cmdInsert.Transaction.Rollback() ' Rollback the transaction if username already exists

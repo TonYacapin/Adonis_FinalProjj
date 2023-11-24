@@ -10,6 +10,9 @@ Public Class Form1
     Public cashiername As String
 
 
+
+
+
     Private Function IsPasswordComplex(password As String) As Boolean
         ' Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character
         Return RegularExpressions.Regex.IsMatch(password, "(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)")
