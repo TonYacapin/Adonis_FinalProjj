@@ -45,6 +45,7 @@ Partial Class deleteuserFORM
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TB_CASHIERID = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,7 +89,7 @@ Partial Class deleteuserFORM
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(232, 404)
+        Me.Button1.Location = New System.Drawing.Point(128, 404)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 54)
         Me.Button1.TabIndex = 51
@@ -242,6 +243,7 @@ Partial Class deleteuserFORM
         Me.Panel5.Controls.Add(Me.Label9)
         Me.Panel5.Controls.Add(Me.CB_USERROLE)
         Me.Panel5.Controls.Add(Me.Label8)
+        Me.Panel5.Controls.Add(Me.Button2)
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.Label1)
         Me.Panel5.Controls.Add(Me.TB_PASSWORD)
@@ -252,6 +254,17 @@ Partial Class deleteuserFORM
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1358, 841)
         Me.Panel5.TabIndex = 52
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(349, 404)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(136, 54)
+        Me.Button2.TabIndex = 51
+        Me.Button2.Text = "Delete"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'deleteuserFORM
         '
@@ -301,4 +314,5 @@ Partial Class deleteuserFORM
     Friend WithEvents TB_CASHIERID As TextBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents Button2 As Button
 End Class
