@@ -32,6 +32,7 @@ Partial Class AdminForm
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel_User = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -53,7 +54,7 @@ Partial Class AdminForm
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.Panel_Items.SuspendLayout()
         Me.Panel_User.SuspendLayout()
         Me.Panel_TransactionRecord.SuspendLayout()
@@ -144,6 +145,7 @@ Partial Class AdminForm
         'Panel_User
         '
         Me.Panel_User.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Panel_User.Controls.Add(Me.Button9)
         Me.Panel_User.Controls.Add(Me.Button8)
         Me.Panel_User.Controls.Add(Me.Button12)
         Me.Panel_User.Controls.Add(Me.Label2)
@@ -153,6 +155,17 @@ Partial Class AdminForm
         Me.Panel_User.Name = "Panel_User"
         Me.Panel_User.Size = New System.Drawing.Size(827, 353)
         Me.Panel_User.TabIndex = 6
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(339, 149)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(187, 38)
+        Me.Button8.TabIndex = 9
+        Me.Button8.Text = "Delete User"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button12
         '
@@ -348,16 +361,16 @@ Partial Class AdminForm
         Me.Panel5.Size = New System.Drawing.Size(1520, 844)
         Me.Panel5.TabIndex = 19
         '
-        'Button8
+        'Button9
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(339, 149)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(187, 38)
-        Me.Button8.TabIndex = 9
-        Me.Button8.Text = "Delete User"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button9.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(339, 193)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(187, 38)
+        Me.Button9.TabIndex = 9
+        Me.Button9.Text = "Edit User"
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'AdminForm
         '
@@ -422,4 +435,5 @@ Partial Class AdminForm
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents Button3 As Button
     Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
 End Class

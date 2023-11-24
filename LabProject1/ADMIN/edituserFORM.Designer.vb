@@ -25,6 +25,25 @@ Partial Class edituserFORM
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(edituserFORM))
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.personalinfopanel = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TB_LASTNAME = New System.Windows.Forms.TextBox()
+        Me.TB_PHONE = New System.Windows.Forms.TextBox()
+        Me.TB_EMAIL = New System.Windows.Forms.TextBox()
+        Me.TB_FIRSTNAME = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.logininfopanel = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CB_USERROLE = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -32,7 +51,6 @@ Partial Class edituserFORM
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TB_PASSWORD = New System.Windows.Forms.TextBox()
         Me.TB_USERNAME = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Button6 = New System.Windows.Forms.Button()
@@ -45,146 +63,302 @@ Partial Class edituserFORM
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TB_CASHIERID = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TB_LASTNAME = New System.Windows.Forms.TextBox()
-        Me.TB_PHONE = New System.Windows.Forms.TextBox()
-        Me.TB_EMAIL = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TB_FIRSTNAME = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.personalinfopanel.SuspendLayout()
+        Me.logininfopanel.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.Label13)
         Me.Panel5.Controls.Add(Me.Label2)
-        Me.Panel5.Controls.Add(Me.ComboBox2)
-        Me.Panel5.Controls.Add(Me.ComboBox1)
-        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.Button5)
         Me.Panel5.Controls.Add(Me.Button2)
-        Me.Panel5.Controls.Add(Me.Button4)
-        Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Controls.Add(Me.Label11)
-        Me.Panel5.Controls.Add(Me.Label12)
-        Me.Panel5.Controls.Add(Me.TB_LASTNAME)
-        Me.Panel5.Controls.Add(Me.TB_PHONE)
-        Me.Panel5.Controls.Add(Me.TB_EMAIL)
-        Me.Panel5.Controls.Add(Me.TextBox2)
-        Me.Panel5.Controls.Add(Me.TB_FIRSTNAME)
-        Me.Panel5.Controls.Add(Me.TextBox3)
-        Me.Panel5.Controls.Add(Me.Label9)
-        Me.Panel5.Controls.Add(Me.CB_USERROLE)
-        Me.Panel5.Controls.Add(Me.Label8)
-        Me.Panel5.Controls.Add(Me.Button1)
-        Me.Panel5.Controls.Add(Me.Label1)
-        Me.Panel5.Controls.Add(Me.TB_PASSWORD)
-        Me.Panel5.Controls.Add(Me.TB_USERNAME)
         Me.Panel5.Controls.Add(Me.DataGridView1)
+        Me.Panel5.Controls.Add(Me.personalinfopanel)
+        Me.Panel5.Controls.Add(Me.logininfopanel)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(346, 100)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1358, 841)
         Me.Panel5.TabIndex = 61
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(117, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(69, 24)
+        Me.Label2.TabIndex = 73
+        Me.Label2.Text = "EDIT:"
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Button5.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(368, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(170, 54)
+        Me.Button5.TabIndex = 69
+        Me.Button5.Text = "Login Info"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(198, 33)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(170, 54)
+        Me.Button2.TabIndex = 69
+        Me.Button2.Text = "Personal Info"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(716, 119)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(677, 375)
+        Me.DataGridView1.TabIndex = 39
+        '
+        'personalinfopanel
+        '
+        Me.personalinfopanel.Controls.Add(Me.Label13)
+        Me.personalinfopanel.Controls.Add(Me.ComboBox2)
+        Me.personalinfopanel.Controls.Add(Me.Button4)
+        Me.personalinfopanel.Controls.Add(Me.Label5)
+        Me.personalinfopanel.Controls.Add(Me.Label4)
+        Me.personalinfopanel.Controls.Add(Me.Label10)
+        Me.personalinfopanel.Controls.Add(Me.Label11)
+        Me.personalinfopanel.Controls.Add(Me.Label12)
+        Me.personalinfopanel.Controls.Add(Me.TB_LASTNAME)
+        Me.personalinfopanel.Controls.Add(Me.TB_PHONE)
+        Me.personalinfopanel.Controls.Add(Me.TB_EMAIL)
+        Me.personalinfopanel.Controls.Add(Me.TB_FIRSTNAME)
+        Me.personalinfopanel.Controls.Add(Me.TextBox3)
+        Me.personalinfopanel.Location = New System.Drawing.Point(6, 160)
+        Me.personalinfopanel.Name = "personalinfopanel"
+        Me.personalinfopanel.Size = New System.Drawing.Size(704, 224)
+        Me.personalinfopanel.TabIndex = 74
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(119, 113)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(69, 24)
+        Me.Label13.TabIndex = 86
+        Me.Label13.Text = "View:"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Manager", "Cashier", "Admin"})
+        Me.ComboBox2.Location = New System.Drawing.Point(194, 106)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(100, 31)
+        Me.ComboBox2.TabIndex = 85
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Button4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(298, 151)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(136, 54)
+        Me.Button4.TabIndex = 84
+        Me.Button4.Text = "EDIT"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(364, 106)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(176, 24)
+        Me.Label5.TabIndex = 83
+        Me.Label5.Text = "Phone Number:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(364, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 24)
+        Me.Label4.TabIndex = 82
+        Me.Label4.Text = "Email:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(364, 28)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(121, 24)
+        Me.Label10.TabIndex = 81
+        Me.Label10.Text = "LastName:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(59, 28)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(124, 24)
+        Me.Label11.TabIndex = 80
+        Me.Label11.Text = "Firstname:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(59, 66)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(123, 24)
+        Me.Label12.TabIndex = 79
+        Me.Label12.Text = "Username:"
+        '
+        'TB_LASTNAME
+        '
+        Me.TB_LASTNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.TB_LASTNAME.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_LASTNAME.Location = New System.Drawing.Point(546, 20)
+        Me.TB_LASTNAME.Name = "TB_LASTNAME"
+        Me.TB_LASTNAME.Size = New System.Drawing.Size(100, 32)
+        Me.TB_LASTNAME.TabIndex = 78
+        '
+        'TB_PHONE
+        '
+        Me.TB_PHONE.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.TB_PHONE.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_PHONE.Location = New System.Drawing.Point(546, 98)
+        Me.TB_PHONE.Name = "TB_PHONE"
+        Me.TB_PHONE.Size = New System.Drawing.Size(100, 32)
+        Me.TB_PHONE.TabIndex = 77
+        '
+        'TB_EMAIL
+        '
+        Me.TB_EMAIL.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.TB_EMAIL.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_EMAIL.Location = New System.Drawing.Point(546, 58)
+        Me.TB_EMAIL.Name = "TB_EMAIL"
+        Me.TB_EMAIL.Size = New System.Drawing.Size(100, 32)
+        Me.TB_EMAIL.TabIndex = 76
+        '
+        'TB_FIRSTNAME
+        '
+        Me.TB_FIRSTNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.TB_FIRSTNAME.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_FIRSTNAME.Location = New System.Drawing.Point(194, 20)
+        Me.TB_FIRSTNAME.Name = "TB_FIRSTNAME"
+        Me.TB_FIRSTNAME.Size = New System.Drawing.Size(100, 32)
+        Me.TB_FIRSTNAME.TabIndex = 75
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(194, 58)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 32)
+        Me.TextBox3.TabIndex = 74
+        '
+        'logininfopanel
+        '
+        Me.logininfopanel.Controls.Add(Me.Label9)
+        Me.logininfopanel.Controls.Add(Me.CB_USERROLE)
+        Me.logininfopanel.Controls.Add(Me.Label8)
+        Me.logininfopanel.Controls.Add(Me.Button1)
+        Me.logininfopanel.Controls.Add(Me.Label1)
+        Me.logininfopanel.Controls.Add(Me.TB_PASSWORD)
+        Me.logininfopanel.Controls.Add(Me.TB_USERNAME)
+        Me.logininfopanel.Location = New System.Drawing.Point(6, 120)
+        Me.logininfopanel.Name = "logininfopanel"
+        Me.logininfopanel.Size = New System.Drawing.Size(704, 266)
+        Me.logininfopanel.TabIndex = 75
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(225, 495)
+        Me.Label9.Location = New System.Drawing.Point(255, 115)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(112, 24)
-        Me.Label9.TabIndex = 57
+        Me.Label9.TabIndex = 64
         Me.Label9.Text = "UserRole:"
         '
         'CB_USERROLE
         '
         Me.CB_USERROLE.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.CB_USERROLE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CB_USERROLE.Enabled = False
         Me.CB_USERROLE.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CB_USERROLE.FormattingEnabled = True
         Me.CB_USERROLE.Items.AddRange(New Object() {"Manager", "Cashier", "Admin"})
-        Me.CB_USERROLE.Location = New System.Drawing.Point(352, 488)
+        Me.CB_USERROLE.Location = New System.Drawing.Point(382, 108)
         Me.CB_USERROLE.Name = "CB_USERROLE"
         Me.CB_USERROLE.Size = New System.Drawing.Size(100, 31)
-        Me.CB_USERROLE.TabIndex = 56
+        Me.CB_USERROLE.TabIndex = 63
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(349, 433)
+        Me.Label8.Location = New System.Drawing.Point(379, 53)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(118, 24)
-        Me.Label8.TabIndex = 55
+        Me.Label8.TabIndex = 62
         Me.Label8.Text = "Password:"
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(290, 558)
+        Me.Button1.Location = New System.Drawing.Point(304, 163)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 54)
-        Me.Button1.TabIndex = 51
-        Me.Button1.Text = "Delete"
+        Me.Button1.TabIndex = 61
+        Me.Button1.Text = "EDIT"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(71, 438)
+        Me.Label1.Location = New System.Drawing.Point(101, 58)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(123, 24)
-        Me.Label1.TabIndex = 46
+        Me.Label1.TabIndex = 60
         Me.Label1.Text = "Username:"
         '
         'TB_PASSWORD
         '
         Me.TB_PASSWORD.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_PASSWORD.Enabled = False
         Me.TB_PASSWORD.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_PASSWORD.Location = New System.Drawing.Point(473, 432)
+        Me.TB_PASSWORD.Location = New System.Drawing.Point(503, 52)
         Me.TB_PASSWORD.Name = "TB_PASSWORD"
         Me.TB_PASSWORD.Size = New System.Drawing.Size(100, 32)
-        Me.TB_PASSWORD.TabIndex = 42
+        Me.TB_PASSWORD.TabIndex = 59
         '
         'TB_USERNAME
         '
         Me.TB_USERNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_USERNAME.Enabled = False
         Me.TB_USERNAME.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_USERNAME.Location = New System.Drawing.Point(206, 430)
+        Me.TB_USERNAME.Location = New System.Drawing.Point(236, 50)
         Me.TB_USERNAME.Name = "TB_USERNAME"
         Me.TB_USERNAME.Size = New System.Drawing.Size(100, 32)
-        Me.TB_USERNAME.TabIndex = 40
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(655, 119)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(677, 375)
-        Me.DataGridView1.TabIndex = 39
+        Me.TB_USERNAME.TabIndex = 58
         '
         'ErrorProvider1
         '
@@ -289,186 +463,6 @@ Partial Class edituserFORM
         Me.TB_CASHIERID.TabIndex = 53
         Me.TB_CASHIERID.Visible = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(103, 213)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 24)
-        Me.Label2.TabIndex = 73
-        Me.Label2.Text = "UserRole:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Manager", "Cashier", "Admin"})
-        Me.ComboBox1.Location = New System.Drawing.Point(230, 206)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 31)
-        Me.ComboBox1.TabIndex = 72
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(30, 159)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 24)
-        Me.Label3.TabIndex = 71
-        Me.Label3.Text = "Password:"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(369, 206)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(222, 36)
-        Me.Button2.TabIndex = 70
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Button4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(269, 275)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(136, 54)
-        Me.Button4.TabIndex = 69
-        Me.Button4.Text = "Add"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(329, 159)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(176, 24)
-        Me.Label5.TabIndex = 68
-        Me.Label5.Text = "Phone Number:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(329, 119)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 24)
-        Me.Label4.TabIndex = 67
-        Me.Label4.Text = "Email:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(329, 81)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(121, 24)
-        Me.Label10.TabIndex = 66
-        Me.Label10.Text = "LastName:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(24, 81)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(124, 24)
-        Me.Label11.TabIndex = 65
-        Me.Label11.Text = "Firstname:"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(24, 119)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(123, 24)
-        Me.Label12.TabIndex = 64
-        Me.Label12.Text = "Username:"
-        '
-        'TB_LASTNAME
-        '
-        Me.TB_LASTNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_LASTNAME.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_LASTNAME.Location = New System.Drawing.Point(511, 73)
-        Me.TB_LASTNAME.Name = "TB_LASTNAME"
-        Me.TB_LASTNAME.Size = New System.Drawing.Size(100, 32)
-        Me.TB_LASTNAME.TabIndex = 63
-        '
-        'TB_PHONE
-        '
-        Me.TB_PHONE.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_PHONE.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_PHONE.Location = New System.Drawing.Point(511, 151)
-        Me.TB_PHONE.Name = "TB_PHONE"
-        Me.TB_PHONE.Size = New System.Drawing.Size(100, 32)
-        Me.TB_PHONE.TabIndex = 62
-        '
-        'TB_EMAIL
-        '
-        Me.TB_EMAIL.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_EMAIL.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_EMAIL.Location = New System.Drawing.Point(511, 111)
-        Me.TB_EMAIL.Name = "TB_EMAIL"
-        Me.TB_EMAIL.Size = New System.Drawing.Size(100, 32)
-        Me.TB_EMAIL.TabIndex = 61
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TextBox2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(159, 151)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 32)
-        Me.TextBox2.TabIndex = 60
-        '
-        'TB_FIRSTNAME
-        '
-        Me.TB_FIRSTNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TB_FIRSTNAME.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_FIRSTNAME.Location = New System.Drawing.Point(159, 73)
-        Me.TB_FIRSTNAME.Name = "TB_FIRSTNAME"
-        Me.TB_FIRSTNAME.Size = New System.Drawing.Size(100, 32)
-        Me.TB_FIRSTNAME.TabIndex = 59
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.TextBox3.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(159, 111)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 32)
-        Me.TextBox3.TabIndex = 58
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Manager", "Cashier", "Admin"})
-        Me.ComboBox2.Location = New System.Drawing.Point(935, 73)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(100, 31)
-        Me.ComboBox2.TabIndex = 72
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(860, 80)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(69, 24)
-        Me.Label13.TabIndex = 73
-        Me.Label13.Text = "View:"
-        '
         'edituserFORM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -488,6 +482,10 @@ Partial Class edituserFORM
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.personalinfopanel.ResumeLayout(False)
+        Me.personalinfopanel.PerformLayout()
+        Me.logininfopanel.ResumeLayout(False)
+        Me.logininfopanel.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -497,13 +495,6 @@ Partial Class edituserFORM
     End Sub
 
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents CB_USERROLE As ComboBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TB_PASSWORD As TextBox
-    Friend WithEvents TB_USERNAME As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents ErrorProvider1 As ErrorProvider
@@ -517,12 +508,20 @@ Partial Class edituserFORM
     Friend WithEvents Button3 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents TB_CASHIERID As TextBox
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Button5 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents logininfopanel As Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents CB_USERROLE As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TB_PASSWORD As TextBox
+    Friend WithEvents TB_USERNAME As TextBox
+    Friend WithEvents personalinfopanel As Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -532,7 +531,6 @@ Partial Class edituserFORM
     Friend WithEvents TB_LASTNAME As TextBox
     Friend WithEvents TB_PHONE As TextBox
     Friend WithEvents TB_EMAIL As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TB_FIRSTNAME As TextBox
     Friend WithEvents TextBox3 As TextBox
 End Class

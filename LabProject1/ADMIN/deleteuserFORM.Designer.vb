@@ -267,6 +267,7 @@ Partial Class deleteuserFORM
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TB_CASHIERID)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "deleteuserFORM"
         Me.Text = "deleteuserFORM"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
