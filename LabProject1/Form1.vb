@@ -13,13 +13,13 @@ Public Class Form1
 
 
 
-    Private Function IsPasswordComplex(password As String) As Boolean
+    Public Function IsPasswordComplex(password As String) As Boolean
         ' Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character
         Return RegularExpressions.Regex.IsMatch(password, "(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)")
     End Function
 
-    Function MD5Hash(input As String) As String
-        Using md5 As MD5 = md5.Create()
+    Public Function MD5Hash(input As String) As String
+        Using md5 As MD5 = MD5.Create()
             Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(input)
             Dim hashBytes As Byte() = md5.ComputeHash(inputBytes)
 

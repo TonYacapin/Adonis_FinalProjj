@@ -62,6 +62,11 @@ Public Class Admin_EditProducts
 
                 ' Show a confirmation message to the user
                 MessageBox.Show("Product changed successfully.")
+
+                CRUD_USER_FORM.UpdateSURecords(AdminForm.lbl_username.Text, "Changed an Item: " + lbl_productname.Text)
+
+
+
             End Using
         Catch ex As Exception
             MessageBox.Show("An error occurred while setting product: " & ex.Message)

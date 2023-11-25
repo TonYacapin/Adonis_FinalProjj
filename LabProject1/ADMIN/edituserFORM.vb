@@ -14,7 +14,7 @@ Public Class edituserFORM
 
         TB_USERNAME.Text = ""
         TB_PASSWORD.Text = ""
-        CB_USERROLE.Text = ""
+        CB_USERROLE.SelectedIndex = -1
     End Sub
 
 
@@ -35,7 +35,7 @@ Public Class edituserFORM
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
-                Dim query As String = "SELECT UserID, Username, Password, UserRole FROM login "
+                Dim query As String = "SELECT Username, Password, UserRole FROM login "
 
                 Dim adapter As New MySqlDataAdapter(query, connection)
                 Dim dataTable As New DataTable()
@@ -181,6 +181,7 @@ Public Class edituserFORM
                 Try
 
                     If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
+
                         TB_USERNAME.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString()
                         TB_PASSWORD.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString()
                         CB_USERROLE.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString()
@@ -219,19 +220,14 @@ Public Class edituserFORM
         AdminForm.UserActivity.Stop()
         AdminForm.UserActivity.Start()
 
-        If (Not String.IsNullOrWhiteSpace(TextBox3.Text) AndAlso
-        Not String.IsNullOrWhiteSpace(TB_FIRSTNAME.Text) AndAlso
-        Not String.IsNullOrWhiteSpace(TB_LASTNAME.Text) AndAlso
-        Not String.IsNullOrWhiteSpace(TB_EMAIL.Text) AndAlso
-        Not String.IsNullOrWhiteSpace(TB_PASSWORD.Text) AndAlso
-        Not String.IsNullOrWhiteSpace(TB_PHONE.Text)) Then
 
-            Try
+
+        Try
                 Dim connectionString As String = "server=localhost;user=root;password=root;database=db_burgeran;"
                 Dim updateSql As String = ""
-                Dim userRole As String = CB_USERROLE.Text
+            Dim userRole As String = ComboBox2.Text
 
-                Select Case userRole
+            Select Case userRole
                     Case "Cashier"
                         updateSql = "UPDATE cashier SET " &
                             "FirstName = @FirstName, " &
@@ -272,9 +268,25 @@ Public Class edituserFORM
                         Try
                             cmdUpdate.ExecuteNonQuery()
                             transaction.Commit()
-                            MessageBox.Show("User updated successfully.")
-                            LoadLoginCData()
-                        Catch ex As MySqlException
+                        MessageBox.Show("User updated successfully.")
+
+                        Select Case ComboBox2.SelectedItem.ToString()
+                            Case "Manager"
+                                LoadmanagerCData()
+                            Case "Cashier"
+                                LoadcashierCData()
+                            Case "Admin"
+                                LoadadminCData()
+                            Case Else
+                                ' Handle other cases if needed
+                        End Select
+
+                        ClearTextBoxes()
+
+                        CRUD_USER_FORM.UpdateSURecords(AdminForm.lbl_username.Text, "Updated User: " + TextBox3.Text)
+
+
+                    Catch ex As MySqlException
                             If ex.Number = 1062 Then
                                 transaction.Rollback()
                                 MessageBox.Show("Error updating user. Duplicate entry.")
@@ -288,10 +300,65 @@ Public Class edituserFORM
             Catch ex As Exception
                 MessageBox.Show("An error occurred while updating the user: " & ex.Message)
             End Try
-        Else
-            MessageBox.Show("Please select user to delete")
-        End If
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        AdminForm.UserActivity.Stop()
+        AdminForm.UserActivity.Start()
+
+        Try
+            Dim connectionString As String = "server=localhost;user=root;password=root;database=db_burgeran;"
+            Dim updateSql As String = ""
+            Dim userRole As String = ComboBox2.Text
+
+            updateSql = "UPDATE login SET " &
+                        "Password = @Password " &
+                        "WHERE Username = @Username"
+
+            If Not Form1.IsPasswordComplex(TB_PASSWORD.Text) Then
+                MessageBox.Show("Password must have at least one uppercase letter, one lowercase letter, one digit, and one special character.")
+                Return
+            End If
+
+            Dim hashedPassword As String = Form1.MD5Hash(TB_PASSWORD.Text)
+
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                Using cmdUpdate As New MySqlCommand(updateSql, connection)
+                    cmdUpdate.Parameters.AddWithValue("@Username", TB_USERNAME.Text)
+                    cmdUpdate.Parameters.AddWithValue("@Password", hashedPassword)
+
+                    Dim transaction = connection.BeginTransaction()
+
+                    Try
+                        cmdUpdate.ExecuteNonQuery()
+                        transaction.Commit()
+                        MessageBox.Show("User updated successfully.")
+                        CRUD_USER_FORM.UpdateSURecords(AdminForm.lbl_username.Text, "Updated User: " + TB_USERNAME.Text)
+                        ClearTextBoxes()
+                        LoadLoginCData()
+
+
+                    Catch ex As MySqlException
+                        If ex.Number = 1062 Then
+                            transaction.Rollback()
+                            MessageBox.Show("Error updating user. Duplicate entry.")
+                        Else
+                            transaction.Rollback()
+                            MessageBox.Show("An error occurred while updating the user: " & ex.Message)
+                        End If
+                    End Try
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while updating the user: " & ex.Message)
+        End Try
     End Sub
 
 
+    Private Sub TB_USERNAME_TextChanged(sender As Object, e As EventArgs) Handles TB_USERNAME.TextChanged
+
+    End Sub
 End Class
